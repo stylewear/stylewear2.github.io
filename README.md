@@ -3,178 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>style.wear.2 - Këpucë & Çanta</title>
+    <title>Style Wear</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome për ikona -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            text-align: center;
         }
 
         header {
-            background-color: #ff6f61;
+            padding: 60px 20px;
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
             color: white;
-            padding: 20px;
-            text-align: center;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2em;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
         }
 
-        nav {
-            margin-top: 10px;
+        header p {
+            font-size: 1.2rem;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+        .section-title {
+            margin: 50px 0 20px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #333;
         }
 
-        .products {
+        .cards {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            padding: 20px;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 0 20px;
         }
 
-        .product {
-            position: relative;
-            width: 250px;
-            margin: 15px;
-            border-radius: 10px;
-            overflow: hidden;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+        .card {
             background-color: white;
-        }
-
-        .product:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        .product img {
-            width: 100%;
-            display: block;
-            transition: transform 0.3s;
-        }
-
-        .product:hover img {
-            transform: scale(1.1);
-        }
-
-        .info {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 15px 10px;
-            text-align: center;
-        }
-
-        .info h2 {
-            margin: 0 0 5px 0;
-            font-size: 1.1em;
-        }
-
-        .info p {
-            margin: 0 0 10px 0;
-            font-size: 1em;
-            font-weight: bold;
-        }
-
-        .info button {
-            background-color: #ff6f61;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            color: white;
-            font-weight: bold;
+            width: 180px;
+            height: 180px;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
 
-        .info button:hover {
-            background-color: #ff3b2e;
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        .card i {
+            font-size: 3rem;
+            color: #e52e71;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
         }
 
         footer {
+            margin-top: 60px;
+            padding: 20px;
             background-color: #333;
             color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
         }
 
-        /* Responsive */
         @media (max-width: 600px) {
-            .products {
-                flex-direction: column;
-                align-items: center;
+            header h1 {
+                font-size: 2rem;
+            }
+            .card {
+                width: 140px;
+                height: 140px;
+            }
+            .card i {
+                font-size: 2.2rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
             }
         }
-
     </style>
 </head>
 <body>
 
-<header>
-    <h1>style.wear.2</h1>
-    <nav>
-        <a href="#">Këpucë</a>
-        <a href="#">Çanta</a>
-        <a href="#">Kontakti</a>
-    </nav>
-</header>
+    <header>
+        <h1>Mirëserdhët në Style Wear</h1>
+        <p>Zgjidhni produktin që dëshironi të eksploroni</p>
+    </header>
 
-<section class="products">
-    <div class="product">
-        <img src="https://via.placeholder.com/250x250.png?text=Këpucë+1" alt="Këpucë 1">
-        <div class="info">
-            <h2>Këpucë Sportive</h2>
-            <p>50€</p>
-            <button>Bli Tani</button>
+    <h2 class="section-title">Kategoritë</h2>
+    <div class="cards">
+        <div class="card">
+            <i class="fas fa-male"></i>
+            <h3>Meshkuj</h3>
+        </div>
+        <div class="card">
+            <i class="fas fa-female"></i>
+            <h3>Femra</h3>
+        </div>
+        <div class="card">
+            <i class="fas fa-child"></i>
+            <h3>Fëmijë</h3>
         </div>
     </div>
 
-    <div class="product">
-        <img src="https://via.placeholder.com/250x250.png?text=Çantë+1" alt="Çantë 1">
-        <div class="info">
-            <h2>Çantë Modë</h2>
-            <p>35€</p>
-            <button>Bli Tani</button>
+    <h2 class="section-title">Llojet e Këpucëve</h2>
+    <div class="cards">
+        <div class="card">
+            <i class="fas fa-shoe-prints"></i>
+            <h3>Class</h3>
+        </div>
+        <div class="card">
+            <i class="fas fa-running"></i>
+            <h3>Sportive</h3>
+        </div>
+        <div class="card">
+            <i class="fas fa-bolt"></i>
+            <h3>Running</h3>
         </div>
     </div>
 
-    <div class="product">
-        <img src="https://via.placeholder.com/250x250.png?text=Këpucë+2" alt="Këpucë 2">
-        <div class="info">
-            <h2>Këpucë Casual</h2>
-            <p>45€</p>
-            <button>Bli Tani</button>
-        </div>
-    </div>
-
-    <div class="product">
-        <img src="https://via.placeholder.com/250x250.png?text=Çantë+2" alt="Çantë 2">
-        <div class="info">
-            <h2>Çantë Elegante</h2>
-            <p>40€</p>
-            <button>Bli Tani</button>
-        </div>
-    </div>
-</section>
-
-<footer>
-    &copy; 2025 style.wear.2 | Të gjitha të drejtat e rezervuara
-</footer>
+    <footer>
+        &copy; 2025 Style Wear. Të gjitha të drejtat e rezervuara.
+    </footer>
 
 </body>
 </html>
